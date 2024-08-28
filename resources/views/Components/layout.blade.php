@@ -25,10 +25,10 @@
                 </div>
                 <div class="hidden md:block">
                   <div class="ml-10 flex items-baseline space-x-4">
-                    <a href="/" class="{{ request()->is("/") ? 'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'}}rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                    <a href="/Meet The Team" class="{{ request()->is("/Meet The Team") ? 'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'}}rounded-md px-3 py-2 text-sm font-medium">Team</a>
-                    <a href="/Contacts" class="{{ request()->is("/Contacts") ? 'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'}}rounded-md px-3 py-2 text-sm font-medium ">Contacts</a>
-                    <a href="/about" class="{{ request()->is("/about") ? 'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'}}rounded-md px-3 py-2 text-sm font-medium">About</a>
+                    <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                    <x-nav-link href="/Meet The Team" :active="request()->is('Meet The Team')">Team</x-nav-link>
+                    <x-nav-link href="/Contacts" :active="request()->is('Contacts')">Contacts</x-nav-link>
+                    <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@
 
         <header class="bg-white shadow">
           <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+            <h1 class="text-3xl font-bold tracking-tight text-yellow-900">{{ $heading }}</h1>
           </div>
         </header>
         <main>
