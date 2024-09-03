@@ -2,6 +2,8 @@
     <x-slot:heading>
         Home Page
     </x-slot:heading>
-    
-    <h1>Hello from the home page</h1>
+
+    @foreach($jobs as $job)
+    <li>{{ $job['title'] }}</li>
+    @endforeach
 </x-layout>
